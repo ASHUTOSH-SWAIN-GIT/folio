@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { SiX, SiGithub, SiGmail } from "react-icons/si";
 import { projects, blogs } from "@/lib/data";
 import TechBadge from "@/components/TechBadge";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Home() {
   const recentProjects = projects.slice(0, 2);
@@ -15,33 +15,7 @@ export default function Home() {
         <p className="text-gray-400 leading-relaxed max-w-lg">
           Computer Science undergrad passionate about building, breaking, and learning through code. Always exploring new technologies and eager to tackle new challenges.
         </p>
-        <div className="flex items-center gap-4">
-           <a 
-            href="https://x.com/LowKeyDevs" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-mocha-mauve transition-colors"
-            aria-label="Twitter"
-          >
-            <SiX size={24} />
-          </a>
-          <a 
-            href="https://github.com/ASHUTOSH-SWAIN-GIT" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-mocha-mauve transition-colors"
-            aria-label="GitHub"
-          >
-            <SiGithub size={24} />
-          </a>
-          <a 
-            href="mailto:ashutoshswain7383@gmail.com" 
-            className="text-gray-400 hover:text-mocha-mauve transition-colors"
-            aria-label="Email"
-          >
-            <SiGmail size={24} />
-          </a>
-        </div>
+        <SocialLinks />
       </section>
 
       <section className="flex flex-col gap-6">
