@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "skyforge",
+    description: "A collaborative database schema design tool that helps you design, visualize, and share database schemas faster with real-time collaboration.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/skyforge",
+    demo: "https://skyforge.lowkeydev.me/",
+    tags: ["Go", "TypeScript"],
+    year: "2024",
+  },
+  {
     title: "golancer",
     description: "A high-performance HTTP load balancer written in Go. Features round-robin balancing, active health checks, and connection tracking.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/golancer",
