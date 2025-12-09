@@ -61,6 +61,13 @@ export const projects = [
 
 export const blogs = [
   {
+    slug: "bittorrent-protocol",
+    title: "BitTorrent Protocol",
+    date: "2025",
+    excerpt: "An overview of the BitTorrent protocol, its peer-to-peer architecture, and how data flows across the swarm.",
+    link: "https://medium.com/@ashutoshswain7383/bittorrent-protocol-4463bcb1953a",
+  },
+  {
     slug: "understanding-googles-borg",
     title: "Understanding Google's Borg",
     date: "2024",

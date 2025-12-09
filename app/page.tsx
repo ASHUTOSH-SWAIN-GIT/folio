@@ -39,7 +39,7 @@ export default function Home() {
                   {project.title}
                 </h3>
               </div>
-              <p className="text-sm text-gray-400 mb-3">{project.description}</p>
+              <p className="text-sm text-gray-400 mb-3 group-hover:text-mocha-mauve transition-colors">{project.description}</p>
               <div className="flex gap-2">
                 {project.tags.map(tag => (
                   <TechBadge key={tag} tag={tag} />
@@ -71,7 +71,7 @@ export default function Home() {
                   {post.title}
                 </h3>
               </div>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400 group-hover:text-mocha-mauve transition-colors">
                 {post.excerpt}
               </p>
             </a>

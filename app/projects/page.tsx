@@ -26,7 +26,7 @@ export default function Projects() {
               </h3>
             </div>
             
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed group-hover:text-mocha-mauve transition-colors">
               {project.description}
             </p>
             
