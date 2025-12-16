@@ -27,13 +27,13 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-4">
           {recentProjects.map((project) => (
-            <a 
+          <a
               key={project.title} 
               href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
               className="group block p-4 -mx-4 rounded-lg hover:bg-white/5 transition-colors"
-            >
+          >
               <div className="flex justify-between items-baseline mb-2">
                 <h3 className="font-medium group-hover:text-mocha-mauve transition-colors">
                   {project.title}
