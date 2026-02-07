@@ -15,31 +15,62 @@ export default function ExperiencePage() {
 
       <div className="flex flex-col gap-6">
         {experience.map((item) => (
-          <div
-            key={`${item.company}-${item.role}`}
-            className="flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6"
-          >
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-4">
-                {item.image ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={item.image}
-                    alt={`${item.company} logo`}
-                    className="h-12 w-12 rounded-full bg-[color:var(--background)] object-contain"
-                  />
-                ) : (
-                  <div className="h-12 w-12 rounded-full bg-[color:var(--background)]" />
-                )}
-                <div>
-                  <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
-                  <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
+          item.link ? (
+            <a
+              key={`${item.company}-${item.role}`}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
+            >
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
+                  {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={item.image}
+                      alt={`${item.company} logo`}
+                      className="h-12 w-12 rounded-full bg-[color:var(--background)] object-contain"
+                    />
+                  ) : (
+                    <div className="h-12 w-12 rounded-full bg-[color:var(--background)]" />
+                  )}
+                  <div>
+                    <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
+                    <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
+                  </div>
                 </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
               </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
+              <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
+            </a>
+          ) : (
+            <div
+              key={`${item.company}-${item.role}`}
+              className="flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6"
+            >
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
+                  {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={item.image}
+                      alt={`${item.company} logo`}
+                      className="h-12 w-12 rounded-full bg-[color:var(--background)] object-contain"
+                    />
+                  ) : (
+                    <div className="h-12 w-12 rounded-full bg-[color:var(--background)]" />
+                  )}
+                  <div>
+                    <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
+                    <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
+                  </div>
+                </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
+              </div>
+              <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
             </div>
-            <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
-          </div>
+          )
         ))}
       </div>
     </div>

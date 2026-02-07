@@ -22,6 +22,7 @@ export type Experience = {
   focus: string;
   timeframe: string;
   image?: string;
+  link?: string;
 };
 
 export const projects: Project[] = [
@@ -128,5 +129,6 @@ export const experience: Experience[] = [
     focus: "Reliability and backend systems.",
     timeframe: "2026 — Present",
     image: "/images/commenda.jpeg",
+    link: "https://www.commenda.io/",
   },
 ];

@@ -62,7 +62,7 @@ export default function TechBadge({ tag }: { tag: string }) {
   const Icon = iconMap[tag] || Code; // Default to Code icon
 
   return (
-    <span className="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 transition-colors hover:bg-white hover:text-black">
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[11px] font-medium leading-none text-white/90 transition-colors hover:bg-white hover:text-black sm:text-xs">
       <Icon size={13} className="shrink-0" />
       {tag}
     </span>
