@@ -40,22 +40,22 @@ export default async function BlogPost({ params }: Props) {
     <article className="flex flex-col gap-8">
       <Link 
         href="/blog" 
-        className="text-sm text-gray-500 hover:text-white flex items-center gap-2 transition-colors mb-4"
+        className="text-sm text-[color:var(--subtle)] hover:text-[color:var(--foreground)] flex items-center gap-2 transition-colors mb-4"
       >
         <ArrowLeft size={16} /> Back to Blog
       </Link>
       
       <header className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold tracking-tight">{post.title}</h1>
-        <div className="flex items-center gap-4 text-sm text-gray-500 font-mono">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">{post.title}</h1>
+        <div className="flex items-center gap-4 text-sm text-[color:var(--subtle)] font-mono">
           <time>{post.date}</time>
           <span>•</span>
           <span>5 min read</span>
         </div>
       </header>
       
-      <div className="prose prose-invert prose-gray max-w-none">
-        <p className="text-lg text-gray-300 leading-relaxed">
+      <div className="prose prose-invert max-w-none">
+        <p className="text-lg text-[color:var(--muted)] leading-relaxed">
           {post.excerpt}
         </p>
         <p>
@@ -66,12 +66,12 @@ export default async function BlogPost({ params }: Props) {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <blockquote>
-          "Simplicity is the ultimate sophistication."
+          &quot;Simplicity is the ultimate sophistication.&quot;
         </blockquote>
         <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </p>
-        <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+        <pre className="bg-[color:var(--surface)] p-4 rounded-lg overflow-x-auto">
           <code>{`// Example code block
 function hello() {
   console.log("Hello, world!");
@@ -81,4 +81,3 @@ function hello() {
     </article>
   );
 }
-

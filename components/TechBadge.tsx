@@ -26,8 +26,11 @@ import {
   Zap,
   Code
 } from "lucide-react";
+import type { ComponentType } from "react";
 
-const iconMap: Record<string, any> = {
+type IconComponent = ComponentType<{ size?: number; className?: string }>;
+
+const iconMap: Record<string, IconComponent> = {
   "Go": SiGo,
   "Load Balancing": Scale,
   "Concurrency": Activity,
@@ -59,10 +62,9 @@ export default function TechBadge({ tag }: { tag: string }) {
   const Icon = iconMap[tag] || Code; // Default to Code icon
 
   return (
-    <span className="flex items-center gap-1.5 text-xs font-medium text-gray-300 bg-gray-900/80 border border-gray-800 px-2.5 py-1 rounded-md transition-colors hover:bg-gray-800 hover:text-white hover:border-gray-700">
-      <Icon size={14} className="shrink-0" />
+    <span className="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 transition-colors hover:bg-white hover:text-black">
+      <Icon size={13} className="shrink-0" />
       {tag}
     </span>
   );
 }
-
