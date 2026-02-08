@@ -1,4 +1,5 @@
 import { experience } from "@/lib/data";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata = {
   title: "Experience | My Portfolio",
@@ -21,7 +22,7 @@ export default function ExperiencePage() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
+              className="group flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">
@@ -30,17 +31,22 @@ export default function ExperiencePage() {
                     <img
                       src={item.image}
                       alt={`${item.company} logo`}
-                      className="h-12 w-12 rounded-full bg-[color:var(--background)] object-contain"
+                      className="h-12 w-12 rounded-lg bg-[color:var(--background)] object-contain object-center"
                     />
                   ) : (
-                    <div className="h-12 w-12 rounded-full bg-[color:var(--background)]" />
+                    <div className="h-12 w-12 rounded-lg bg-[color:var(--background)]" />
                   )}
                   <div>
                     <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
                     <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
                   </div>
                 </div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
+                <div className="flex items-center gap-3">
+                  <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
+                  <span className="inline-flex items-center text-[color:var(--subtle)] transition-transform duration-300 group-hover:translate-x-1">
+                    <ArrowUpRight size={16} />
+                  </span>
+                </div>
               </div>
               <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
             </a>
