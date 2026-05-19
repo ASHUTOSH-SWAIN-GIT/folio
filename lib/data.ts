@@ -36,7 +36,7 @@ export const projects: Project[] = [
     demo: "https://skyforge.lowkeydev.me/",
     tags: ["Next.js", "TypeScript", "Go", "Database"],
     year: "2025",
-    status: "Paused",
+    status: "Active",
     kind: "product",
     featured: true,
   },
