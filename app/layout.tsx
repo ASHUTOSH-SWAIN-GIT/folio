@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s · LowKeyDev",
   },
   description:
-    "Ashutosh Swain — software engineer building reliable backend, infra and systems software. Mostly Go.",
+    "Ashutosh Swain, software engineer building reliable backend, infra and systems software. Mostly Go.",
 };
 
 export default function RootLayout({

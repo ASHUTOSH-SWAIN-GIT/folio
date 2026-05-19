@@ -29,9 +29,21 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
+    title: "skyforge",
+    description:
+      "A collaborative database schema design tool. Design, visualize, and share schemas with real-time collaboration over ER diagrams.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/skyforge",
+    demo: "https://skyforge.lowkeydev.me/",
+    tags: ["Next.js", "TypeScript", "Go", "Database"],
+    year: "2025",
+    status: "Paused",
+    kind: "product",
+    featured: true,
+  },
+  {
     title: "casper",
     description:
-      "An MCP server that gives agents a live, queryable view of your Terraform infrastructure — graph queries, drift detection, policy gates and blast-radius simulation before apply.",
+      "An MCP server that gives agents a live, queryable view of your Terraform infrastructure. Graph queries, drift detection, policy gates and blast-radius simulation before apply.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/casper-mcp",
     demo: "https://casper.lowkeydev.me/",
     tags: ["Go", "MCP", "Terraform", "Infra"],
@@ -41,19 +53,9 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "coja",
-    description:
-      "A full-text search engine written in Go. Inverted indexes, tokenization, ranking — built from scratch to understand how Lucene-style search actually works.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/coja",
-    tags: ["Go", "Search", "Systems Programming"],
-    year: "2026",
-    kind: "systems",
-    featured: true,
-  },
-  {
     title: "maxim",
     description:
-      "A TUI for managing local databases. Browse schemas, run queries, edit rows — without leaving the terminal. Built on Bubble Tea.",
+      "A TUI for managing local databases. Browse schemas, run queries, edit rows without leaving the terminal. Built on Bubble Tea.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/maxim",
     tags: ["Go", "Bubble Tea", "TUI", "CLI"],
     year: "2026",
@@ -61,9 +63,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "coja",
+    description:
+      "A full-text search engine written in Go. Inverted indexes, tokenization, ranking. Built from scratch to understand how Lucene-style search actually works.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/coja",
+    tags: ["Go", "Search", "Systems Programming"],
+    year: "2026",
+    kind: "systems",
+  },
+  {
     title: "kansi",
     description:
-      "A ZooKeeper-style coordination service implemented in Go. Distributed consensus, ephemeral nodes, watches — exploring the primitives behind every distributed system you depend on.",
+      "A ZooKeeper-style coordination service implemented in Go. Distributed consensus, ephemeral nodes, watches. Exploring the primitives behind every distributed system you depend on.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/Kansi",
     tags: ["Go", "Distributed Systems", "Consensus"],
     year: "2026",
@@ -81,18 +92,9 @@ export const projects: Project[] = [
   {
     title: "torrent",
     description:
-      "A BitTorrent client written in Go. Bencode parsing, peer protocol, piece selection, swarm orchestration — read the spec, shipped the bytes.",
+      "A BitTorrent client written in Go. Bencode parsing, peer protocol, piece selection, swarm orchestration. Read the spec, shipped the bytes.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/torrent",
     tags: ["Go", "P2P", "Networking"],
-    year: "2026",
-    kind: "systems",
-  },
-  {
-    title: "mapreduce",
-    description:
-      "MapReduce implementation in Go — coordinator, workers, fault tolerance. Inspired by the original Google paper.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/mapreduce",
-    tags: ["Go", "Distributed Systems"],
     year: "2026",
     kind: "systems",
   },
@@ -108,11 +110,20 @@ export const projects: Project[] = [
   {
     title: "godht",
     description:
-      "A Distributed Hash Table using the Kademlia protocol — XOR distance, k-buckets, peer discovery. The substrate behind every serious P2P network.",
+      "A Distributed Hash Table using the Kademlia protocol. XOR distance, k-buckets, peer discovery. The substrate behind every serious P2P network.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/godht",
     tags: ["Go", "DHT", "P2P"],
     year: "2025",
     kind: "systems",
+  },
+  {
+    title: "dahmer",
+    description:
+      "A tiny CLI to kill whatever process is hogging a port. One command, zero ceremony.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/dahmer",
+    tags: ["Go", "CLI"],
+    year: "2026",
+    kind: "tool",
   },
   {
     title: "zora",
@@ -126,22 +137,11 @@ export const projects: Project[] = [
   {
     title: "shortify",
     description:
-      "A URL shortener in Go. Custom slug support, click tracking, sane defaults — small enough to read end-to-end in one sitting.",
+      "A URL shortener in Go. Custom slug support, click tracking, sane defaults. Small enough to read end-to-end in one sitting.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/shortify",
     tags: ["Go", "Web API"],
     year: "2025",
     kind: "systems",
-  },
-  {
-    title: "skyforge",
-    description:
-      "A collaborative database schema design tool — design, visualize, and share schemas with real-time collaboration over ER diagrams.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/skyforge",
-    demo: "https://skyforge.lowkeydev.me/",
-    tags: ["Next.js", "TypeScript", "Go", "Database"],
-    year: "2025",
-    status: "Paused",
-    kind: "product",
   },
   {
     title: "podstore",
@@ -187,7 +187,7 @@ export const experience: Experience[] = [
     company: "Commenda",
     role: "Software Engineering Intern",
     focus: "Reliability and backend systems.",
-    timeframe: "2026 — Present",
+    timeframe: "2026 · Present",
     image: "/images/commenda.jpeg",
     link: "https://www.commenda.io/",
   },
@@ -198,4 +198,4 @@ export const stack = {
   exploring: ["Distributed Systems", "MCP", "Observability"],
 };
 
-export const nowBuilding = "casper — an MCP server for live Terraform infrastructure context.";
+export const nowBuilding = "casper, an MCP server for live Terraform infrastructure context.";

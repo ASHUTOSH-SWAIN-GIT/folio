@@ -1,32 +1,38 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ─────────────────────────────────────────────────────────────
+/*
    Palette options (uncomment one block to switch the theme).
-   ─────────────────────────────────────────────────────────────
 
-   [Option A] Warm paper · terracotta accent
-   --background: #efe9dd; --surface: #e7e0d1; --foreground: #1c1917;
-   --muted: #57534e; --subtle: #8b8378; --faint: #b8b0a2;
-   --hairline: rgba(28, 25, 23, 0.12);
-   --hairline-strong: rgba(28, 25, 23, 0.28);
-   --accent: #b9462a; --accent-soft: rgba(185, 70, 42, 0.12);
-
-   [Option B — ACTIVE] Warm dark · honey accent
+   [Option A · ACTIVE] Warm paper · terracotta accent
    See :root below.
+
+   [Option B] Warm dark · honey accent
+   --background: #1a1814; --surface: #221f1a; --foreground: #f0ebe0;
+   --muted: #b5ad9e; --subtle: #7a7363; --faint: #44403a;
+   --hairline: rgba(240, 235, 224, 0.08);
+   --hairline-strong: rgba(240, 235, 224, 0.2);
+   --accent: #e3a857; --accent-soft: rgba(227, 168, 87, 0.14);
+
+   [Option C] Midnight · coral accent
+   --background: #0f1320; --surface: #181d2e; --foreground: #ece9e0;
+   --muted: #9da1b3; --subtle: #5d6275; --faint: #2f3447;
+   --hairline: rgba(236, 233, 224, 0.08);
+   --hairline-strong: rgba(236, 233, 224, 0.2);
+   --accent: #ff6b5b; --accent-soft: rgba(255, 107, 91, 0.14);
 */
 
 :root {
-  --background: #1a1814;
-  --surface: #221f1a;
-  --foreground: #f0ebe0;
-  --muted: #b5ad9e;
-  --subtle: #7a7363;
-  --faint: #44403a;
-  --hairline: rgba(240, 235, 224, 0.08);
-  --hairline-strong: rgba(240, 235, 224, 0.2);
-  --accent: #e3a857;
-  --accent-soft: rgba(227, 168, 87, 0.14);
+  --background: #efe9dd;
+  --surface: #e7e0d1;
+  --foreground: #1c1917;
+  --muted: #57534e;
+  --subtle: #8b8378;
+  --faint: #b8b0a2;
+  --hairline: rgba(28, 25, 23, 0.12);
+  --hairline-strong: rgba(28, 25, 23, 0.28);
+  --accent: #b9462a;
+  --accent-soft: rgba(185, 70, 42, 0.12);
 }
 
 @theme inline {
