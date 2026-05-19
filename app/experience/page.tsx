@@ -2,82 +2,59 @@ import { experience } from "@/lib/data";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata = {
-  title: "Experience | My Portfolio",
-  description: "My professional experience and roles.",
+  title: "Work",
+  description: "Where I've worked.",
 };
 
 export default function ExperiencePage() {
   return (
-    <div className="flex flex-col gap-12">
-      <section className="flex flex-col gap-4 pb-8">
-        <p className="text-xs uppercase tracking-[0.45em] text-[color:var(--subtle)]">Work</p>
-        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Experience</h1>
+    <div className="flex flex-col gap-10">
+      <section className="flex flex-col gap-3">
+        <h1 className="text-3xl sm:text-4xl font-medium tracking-tight">
+          Work
+        </h1>
       </section>
 
-      <div className="flex flex-col gap-6">
-        {experience.map((item) => (
-          item.link ? (
+      <div className="flex flex-col border-t border-hairline">
+        {experience.map((item) => {
+          const inner = (
+            <div className="group flex flex-col gap-2 border-b border-hairline py-5">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="text-base font-medium text-[color:var(--foreground)] transition-colors group-hover:text-[color:var(--accent)]">
+                  {item.company}
+                </h3>
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="font-mono text-xs text-[color:var(--subtle)]">
+                    {item.timeframe}
+                  </span>
+                  {item.link && (
+                    <ArrowUpRight
+                      size={14}
+                      className="text-[color:var(--subtle)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--accent)]"
+                    />
+                  )}
+                </div>
+              </div>
+              <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
+              <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+                {item.focus}
+              </p>
+            </div>
+          );
+
+          return item.link ? (
             <a
               key={`${item.company}-${item.role}`}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-4">
-                  {item.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={item.image}
-                      alt={`${item.company} logo`}
-                      className="h-12 w-12 rounded-lg bg-[color:var(--background)] object-contain object-center"
-                    />
-                  ) : (
-                    <div className="h-12 w-12 rounded-lg bg-[color:var(--background)]" />
-                  )}
-                  <div>
-                    <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
-                    <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
-                  <span className="inline-flex items-center text-[color:var(--subtle)] transition-transform duration-300 group-hover:translate-x-1">
-                    <ArrowUpRight size={16} />
-                  </span>
-                </div>
-              </div>
-              <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
+              {inner}
             </a>
           ) : (
-            <div
-              key={`${item.company}-${item.role}`}
-              className="flex flex-col gap-4 rounded-2xl bg-[color:var(--surface)] p-6"
-            >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-4">
-                  {item.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={item.image}
-                      alt={`${item.company} logo`}
-                      className="h-12 w-12 rounded-full bg-[color:var(--background)] object-contain"
-                    />
-                  ) : (
-                    <div className="h-12 w-12 rounded-full bg-[color:var(--background)]" />
-                  )}
-                  <div>
-                    <p className="text-lg font-semibold text-[color:var(--foreground)]">{item.company}</p>
-                    <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
-                  </div>
-                </div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--subtle)]">{item.timeframe}</p>
-              </div>
-              <p className="text-sm text-[color:var(--muted)]">{item.focus}</p>
-            </div>
-          )
-        ))}
+            <div key={`${item.company}-${item.role}`}>{inner}</div>
+          );
+        })}
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ export type Project = {
   tags: string[];
   year: string;
   status?: string;
+  kind?: "systems" | "infra" | "product" | "tool";
+  featured?: boolean;
 };
 
 export type Blog = {
@@ -27,71 +29,129 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
-    title: "skyforge",
+    title: "casper",
     description:
-      "A collaborative database schema design tool that helps you design, visualize, and share database schemas faster with real-time collaboration.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/skyforge",
-    demo: "https://skyforge.lowkeydev.me/",
-    tags: ["Go", "TypeScript"],
-    year: "2024",
-    status: "Paused",
+      "An MCP server that gives agents a live, queryable view of your Terraform infrastructure — graph queries, drift detection, policy gates and blast-radius simulation before apply.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/casper-mcp",
+    demo: "https://casper.lowkeydev.me/",
+    tags: ["Go", "MCP", "Terraform", "Infra"],
+    year: "2026",
+    status: "Active",
+    kind: "infra",
+    featured: true,
   },
   {
-    title: "golancer",
+    title: "coja",
     description:
-      "A high-performance HTTP load balancer written in Go. Features round-robin balancing, active health checks, and connection tracking.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/golancer",
-    tags: ["Go"],
-    year: "2025",
+      "A full-text search engine written in Go. Inverted indexes, tokenization, ranking — built from scratch to understand how Lucene-style search actually works.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/coja",
+    tags: ["Go", "Search", "Systems Programming"],
+    year: "2026",
+    kind: "systems",
+    featured: true,
   },
   {
     title: "maxim",
     description:
-      "A powerful TUI (Terminal User Interface) tool for managing and interacting with local databases efficiently.",
+      "A TUI for managing local databases. Browse schemas, run queries, edit rows — without leaving the terminal. Built on Bubble Tea.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/maxim",
-    tags: ["Go", "Bubble Tea"],
-    year: "2025",
+    tags: ["Go", "Bubble Tea", "TUI", "CLI"],
+    year: "2026",
+    kind: "tool",
+    featured: true,
+  },
+  {
+    title: "kansi",
+    description:
+      "A ZooKeeper-style coordination service implemented in Go. Distributed consensus, ephemeral nodes, watches — exploring the primitives behind every distributed system you depend on.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/Kansi",
+    tags: ["Go", "Distributed Systems", "Consensus"],
+    year: "2026",
+    kind: "systems",
+  },
+  {
+    title: "golancer",
+    description:
+      "A high-performance HTTP load balancer in Go. Round-robin balancing, active health checks, connection tracking, graceful failover.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/golancer",
+    tags: ["Go", "Load Balancing", "Networking"],
+    year: "2026",
+    kind: "systems",
+  },
+  {
+    title: "torrent",
+    description:
+      "A BitTorrent client written in Go. Bencode parsing, peer protocol, piece selection, swarm orchestration — read the spec, shipped the bytes.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/torrent",
+    tags: ["Go", "P2P", "Networking"],
+    year: "2026",
+    kind: "systems",
+  },
+  {
+    title: "mapreduce",
+    description:
+      "MapReduce implementation in Go — coordinator, workers, fault tolerance. Inspired by the original Google paper.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/mapreduce",
+    tags: ["Go", "Distributed Systems"],
+    year: "2026",
+    kind: "systems",
   },
   {
     title: "godis",
     description:
-      "A Redis-compatible in-memory key-value store built from scratch in Go, exploring database internals.",
+      "A Redis-compatible in-memory key-value store built from scratch in Go. RESP protocol, expiry, pub/sub primitives.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/godis",
-    tags: ["Go"],
-    year: "2024",
-  },
-  {
-    title: "zora",
-    description:
-      "A fast and simple command-line tool written in Go to download specific folders from public GitHub repositories without cloning the entire project.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/zora",
-    tags: ["Go"],
-    year: "2024",
+    tags: ["Go", "Redis", "Database"],
+    year: "2025",
+    kind: "systems",
   },
   {
     title: "godht",
     description:
-      "A Distributed Hash Table (DHT) implementation using Kademlia protocol for peer-to-peer networking.",
+      "A Distributed Hash Table using the Kademlia protocol — XOR distance, k-buckets, peer discovery. The substrate behind every serious P2P network.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/godht",
-    tags: ["Go"],
-    year: "2024",
+    tags: ["Go", "DHT", "P2P"],
+    year: "2025",
+    kind: "systems",
+  },
+  {
+    title: "zora",
+    description:
+      "A CLI to download specific folders from public GitHub repositories without cloning the whole project. Fast, single-binary, zero-config.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/zora",
+    tags: ["Go", "CLI", "Git"],
+    year: "2026",
+    kind: "tool",
   },
   {
     title: "shortify",
     description:
-      "A simple URL shortener built using Golang, focusing on performance and simplicity.",
+      "A URL shortener in Go. Custom slug support, click tracking, sane defaults — small enough to read end-to-end in one sitting.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/shortify",
-    tags: ["Go"],
-    year: "2024",
+    tags: ["Go", "Web API"],
+    year: "2025",
+    kind: "systems",
+  },
+  {
+    title: "skyforge",
+    description:
+      "A collaborative database schema design tool — design, visualize, and share schemas with real-time collaboration over ER diagrams.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/skyforge",
+    demo: "https://skyforge.lowkeydev.me/",
+    tags: ["Next.js", "TypeScript", "Go", "Database"],
+    year: "2025",
+    status: "Paused",
+    kind: "product",
   },
   {
     title: "podstore",
     description:
-      "A platform for creating video call sessions with recording capabilities. Built as a Riverside.fm clone.",
+      "A Riverside.fm-style platform for recording high-quality video call sessions. Local recording per participant, then uploaded server-side.",
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/podstore",
     demo: "https://held-icecream-bca.notion.site/RIVERSIDE-CLONE-PROJECT-POW-23e11bbd1f3d8002acded7256497f9af",
-    tags: ["Next.js", "TypeScript", "WebRTC", "Tailwind CSS"],
-    year: "2024",
+    tags: ["Next.js", "TypeScript", "WebRTC", "Multimedia"],
+    year: "2025",
+    kind: "product",
   },
 ];
 
@@ -132,3 +192,10 @@ export const experience: Experience[] = [
     link: "https://www.commenda.io/",
   },
 ];
+
+export const stack = {
+  daily: ["Go", "TypeScript", "Next.js", "Postgres", "Terraform"],
+  exploring: ["Distributed Systems", "MCP", "Observability"],
+};
+
+export const nowBuilding = "casper — an MCP server for live Terraform infrastructure context.";

@@ -1,35 +1,30 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Familjen_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "@/components/Navbar";
 
-const displayFont = DM_Serif_Display({
-  variable: "--font-display",
+const sans = Geist({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
-const bodyFont = Familjen_Grotesk({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-const monoFont = IBM_Plex_Mono({
+const mono = Geist_Mono({
   variable: "--font-mono",
-  weight: ["400", "500"],
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ashutosh Swain",
-  description: "lowkeydevs portfolio",
+  metadataBase: new URL("https://lowkeydev.me"),
+  title: {
+    default: "Ashutosh Swain · LowKeyDev",
+    template: "%s · LowKeyDev",
+  },
+  description:
+    "Ashutosh Swain — software engineer building reliable backend, infra and systems software. Mostly Go.",
 };
-
-import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -39,10 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} antialiased min-h-screen max-w-5xl mx-auto px-6 sm:px-10`}
+        className={`${sans.variable} ${mono.variable} antialiased min-h-screen max-w-2xl mx-auto px-6 sm:px-8`}
       >
         <Navbar />
-        <main className="mb-20">{children}</main>
+        <main className="pb-24">{children}</main>
         <Analytics />
       </body>
     </html>

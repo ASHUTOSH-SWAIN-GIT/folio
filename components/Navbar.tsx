@@ -1,24 +1,31 @@
 import Link from "next/link";
 
+const links = [
+  { href: "/", label: "about" },
+  { href: "/projects", label: "projects" },
+  { href: "/experience", label: "work" },
+  { href: "/blog", label: "writing" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between py-10 mb-14">
-      <Link href="/" className="text-lg font-display tracking-tight text-[color:var(--foreground)] hover:text-[color:var(--accent-strong)] transition-colors">
-        LowKeyDev
+    <nav className="flex items-center justify-between py-8 sm:py-10 mb-10">
+      <Link
+        href="/"
+        className="text-sm font-medium text-[color:var(--foreground)] hover:text-[color:var(--accent)] transition-colors"
+      >
+        lowkeydev
       </Link>
-      <div className="flex items-center gap-5 text-xs uppercase tracking-[0.25em] text-[color:var(--subtle)]">
-        <Link href="/" className="hover:text-[color:var(--foreground)] transition-colors">
-          Home
-        </Link>
-        <Link href="/experience" className="hover:text-[color:var(--foreground)] transition-colors">
-          Experience
-        </Link>
-        <Link href="/projects" className="hover:text-[color:var(--foreground)] transition-colors">
-          Projects
-        </Link>
-        <Link href="/blog" className="hover:text-[color:var(--foreground)] transition-colors">
-          Blog
-        </Link>
+      <div className="flex items-center gap-5 sm:gap-6 text-sm text-[color:var(--subtle)]">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="hover:text-[color:var(--foreground)] transition-colors"
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
