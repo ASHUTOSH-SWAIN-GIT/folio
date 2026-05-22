@@ -19,7 +19,7 @@ export default function ExperiencePage() {
         {experience.map((item) => {
           const inner = (
             <div className="group flex flex-col gap-2 border-b border-hairline py-5">
-              <div className="flex items-baseline justify-between gap-4">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-base font-medium text-[color:var(--foreground)] transition-colors group-hover:text-[color:var(--accent)]">
                   {item.company}
                 </h3>
