@@ -186,8 +186,8 @@ export const experience: Experience[] = [
   {
     company: "Commenda",
     role: "Software Engineering Intern",
-    focus: "Reliability and backend systems.",
-    timeframe: "2026 · Present",
+    focus: "Backend and observability.",
+    timeframe: "2026 · 6 months",
     image: "/images/commenda.jpeg",
     link: "https://www.commenda.io/",
   },
