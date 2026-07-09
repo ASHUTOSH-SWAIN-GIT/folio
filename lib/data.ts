@@ -184,6 +184,22 @@ export const blogs: Blog[] = [
 
 export const experience: Experience[] = [
   {
+    company: "RaazMD",
+    role: "Software Engineer",
+    focus: "Backend and platform for the AI-powered men's health assessment and care product.",
+    timeframe: "2026 · present",
+    image: "/images/raazmd.png",
+    link: "https://www.raazmd.com/",
+  },
+  {
+    company: "Scout HQ",
+    role: "Founding Engineer",
+    focus: "AI-powered product demos, onboarding flows, and in-product support for B2B SaaS.",
+    timeframe: "2026 · present",
+    image: "/images/scouthq.png",
+    link: "https://usescouthq.com/",
+  },
+  {
     company: "Commenda",
     role: "Software Engineering Intern",
     focus: "Backend and observability.",
