@@ -1,43 +1,60 @@
-import { papers } from "@/lib/papers";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata = {
-  title: "Papershelf",
-  description: "Papers I'm reading.",
+  title: "Voiceovers",
+  description: "Recorded walkthroughs of things I've built.",
 };
 
-export default function PapershelfPage() {
+type Voiceover = {
+  title: string;
+  description: string;
+  duration: string;
+  link: string;
+};
+
+const voiceovers: Voiceover[] = [
+  {
+    title: "Stream Processing Engine",
+    description:
+      "Walkthrough of the engine — why stream processing exists, Kafka partitions to readers, source, router, the stateless and stateful worker stages, sinks, and backpressure.",
+    duration: "11 min",
+    link: "https://drive.google.com/drive/u/1/folders/1tFdPwr-3XI1lG5HwfzvGBV9vTRBz3tvC",
+  },
+];
+
+export default function VoiceoversPage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="flex flex-col gap-3">
         <h1 className="text-3xl sm:text-4xl font-medium tracking-tight">
-          Papershelf
+          Voiceovers
         </h1>
+        <p className="text-sm text-[color:var(--muted)]">
+          Recorded walkthroughs where I explain things I&apos;ve built.
+        </p>
       </section>
 
-      {papers.length === 0 ? (
+      {voiceovers.length === 0 ? (
         <div className="border-t border-hairline py-10">
-          <p className="text-sm text-[color:var(--subtle)]">
-            Updating shortly.
-          </p>
+          <p className="text-sm text-[color:var(--subtle)]">Updating shortly.</p>
         </div>
       ) : (
         <div className="flex flex-col border-t border-hairline">
-          {papers.map((paper) => (
+          {voiceovers.map((vo) => (
             <a
-              key={paper.title}
-              href={paper.link}
+              key={vo.title}
+              href={vo.link}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col gap-2 border-b border-hairline py-5"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h2 className="text-base font-medium text-[color:var(--foreground)] transition-colors group-hover:text-[color:var(--accent)]">
-                  {paper.title}
+                  {vo.title}
                 </h2>
                 <div className="flex items-center gap-2 shrink-0">
                   <span className="font-mono text-xs text-[color:var(--subtle)]">
-                    {paper.year}
+                    {vo.duration}
                   </span>
                   <ArrowUpRight
                     size={14}
@@ -45,14 +62,9 @@ export default function PapershelfPage() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-[color:var(--muted)]">
-                {paper.authors}
+              <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+                {vo.description}
               </p>
-              {paper.note && (
-                <p className="text-sm leading-relaxed text-[color:var(--muted)]">
-                  {paper.note}
-                </p>
-              )}
             </a>
           ))}
         </div>
