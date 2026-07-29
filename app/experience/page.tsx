@@ -36,9 +36,6 @@ export default function ExperiencePage() {
                 </div>
               </div>
               <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
-              <p className="text-sm leading-relaxed text-[color:var(--muted)]">
-                {item.focus}
-              </p>
             </div>
           );
 

@@ -186,7 +186,7 @@ export const experience: Experience[] = [
   {
     company: "RaazMD",
     role: "Software Engineer",
-    focus: "Backend and platform for the AI-powered men's health assessment and care product.",
+    focus: "",
     timeframe: "2026 · present",
     image: "/images/raazmd.png",
     link: "https://www.raazmd.com/",
@@ -194,7 +194,7 @@ export const experience: Experience[] = [
   {
     company: "Scout HQ",
     role: "Founding Engineer",
-    focus: "AI-powered product demos, onboarding flows, and in-product support for B2B SaaS.",
+    focus: "",
     timeframe: "2026 · present",
     image: "/images/scouthq.png",
     link: "https://usescouthq.com/",
@@ -202,7 +202,7 @@ export const experience: Experience[] = [
   {
     company: "Commenda",
     role: "Software Engineering Intern",
-    focus: "Backend and observability.",
+    focus: "",
     timeframe: "2026 · 6 months",
     image: "/images/commenda.jpeg",
     link: "https://www.commenda.io/",
