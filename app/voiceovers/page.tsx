@@ -8,7 +8,7 @@ export const metadata = {
 type Voiceover = {
   title: string;
   description: string;
-  duration: string;
+  duration?: string;
   link: string;
 };
 
@@ -19,6 +19,12 @@ const voiceovers: Voiceover[] = [
       "Walkthrough of the engine — why stream processing exists, Kafka partitions to readers, source, router, the stateless and stateful worker stages, sinks, and backpressure.",
     duration: "11 min",
     link: "https://drive.google.com/drive/u/1/folders/1tFdPwr-3XI1lG5HwfzvGBV9vTRBz3tvC",
+  },
+  {
+    title: "Designing Reddit",
+    description:
+      "System design walkthrough of Reddit — how posts, feeds, votes and comments fit together, and the tradeoffs behind each piece.",
+    link: "https://drive.google.com/drive/folders/15T1PUaVVosUGLCtJWYKJWAHWTa8F7YaX?usp=sharing",
   },
 ];
 
@@ -53,9 +59,11 @@ export default function VoiceoversPage() {
                   {vo.title}
                 </h2>
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="font-mono text-xs text-[color:var(--subtle)]">
-                    {vo.duration}
-                  </span>
+                  {vo.duration && (
+                    <span className="font-mono text-xs text-[color:var(--subtle)]">
+                      {vo.duration}
+                    </span>
+                  )}
                   <ArrowUpRight
                     size={14}
                     className="text-[color:var(--subtle)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--accent)]"
