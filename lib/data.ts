@@ -29,6 +29,17 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
+    title: "weibo",
+    description:
+      "A stream processing engine in Go, inspired by Apache Flink. Kafka sources, windowed aggregations, disk-backed state and checkpointing — up to exactly-once semantics on Kafka-to-Kafka pipelines.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/Weibo",
+    tags: ["Go", "Kafka", "Stream Processing", "Distributed Systems"],
+    year: "2026",
+    status: "Active",
+    kind: "systems",
+    featured: true,
+  },
+  {
     title: "skyforge",
     description:
       "A collaborative database schema design tool. Design, visualize, and share schemas with real-time collaboration over ER diagrams.",
@@ -50,17 +61,6 @@ export const projects: Project[] = [
     year: "2026",
     status: "Active",
     kind: "infra",
-    featured: true,
-  },
-  {
-    title: "weibo",
-    description:
-      "A stream processing engine in Go, inspired by Apache Flink. Kafka sources, windowed aggregations, disk-backed state and checkpointing — up to exactly-once semantics on Kafka-to-Kafka pipelines.",
-    link: "https://github.com/ASHUTOSH-SWAIN-GIT/Weibo",
-    tags: ["Go", "Kafka", "Stream Processing", "Distributed Systems"],
-    year: "2026",
-    status: "Active",
-    kind: "systems",
     featured: true,
   },
   {
@@ -198,7 +198,7 @@ export const experience: Experience[] = [
     company: "RaazMD",
     role: "Software Engineer",
     focus: "",
-    timeframe: "2026 · present",
+    timeframe: "2026",
     image: "/images/raazmd.png",
     link: "https://www.raazmd.com/",
   },
