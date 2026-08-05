@@ -53,6 +53,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "weibo",
+    description:
+      "A stream processing engine in Go, inspired by Apache Flink. Kafka sources, windowed aggregations, disk-backed state and checkpointing — up to exactly-once semantics on Kafka-to-Kafka pipelines.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/Weibo",
+    tags: ["Go", "Kafka", "Stream Processing", "Distributed Systems"],
+    year: "2026",
+    status: "Active",
+    kind: "systems",
+    featured: true,
+  },
+  {
     title: "maxim",
     description:
       "A TUI for managing local databases. Browse schemas, run queries, edit rows without leaving the terminal. Built on Bubble Tea.",
