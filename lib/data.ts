@@ -206,7 +206,7 @@ export const experience: Experience[] = [
     company: "Scout HQ",
     role: "Founding Engineer",
     focus: "",
-    timeframe: "2026 · present",
+    timeframe: "2026",
     image: "/images/scouthq.png",
     link: "https://usescouthq.com/",
   },
