@@ -5,7 +5,6 @@ export type Project = {
   demo?: string;
   tags: string[];
   year: string;
-  status?: string;
   kind?: "systems" | "infra" | "product" | "tool";
   featured?: boolean;
 };
@@ -35,7 +34,6 @@ export const projects: Project[] = [
     link: "https://github.com/ASHUTOSH-SWAIN-GIT/Weibo",
     tags: ["Go", "Kafka", "Stream Processing", "Distributed Systems"],
     year: "2026",
-    status: "Active",
     kind: "systems",
     featured: true,
   },
@@ -47,7 +45,6 @@ export const projects: Project[] = [
     demo: "https://skyforge.lowkeydev.me/",
     tags: ["Next.js", "TypeScript", "Go", "Database"],
     year: "2025",
-    status: "Active",
     kind: "product",
     featured: true,
   },
@@ -59,7 +56,6 @@ export const projects: Project[] = [
     demo: "https://casper.lowkeydev.me/",
     tags: ["Go", "MCP", "Terraform", "Infra"],
     year: "2026",
-    status: "Active",
     kind: "infra",
     featured: true,
   },

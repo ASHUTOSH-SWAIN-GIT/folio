@@ -17,11 +17,6 @@ export default function ProjectRow({ project }: { project: Project }) {
           >
             {project.title}
           </a>
-          {project.status && (
-            <span className="font-mono text-[10px] uppercase tracking-wider text-[color:var(--subtle)]">
-              {project.status}
-            </span>
-          )}
         </div>
         <div className="flex items-center gap-3 shrink-0">
           <span className="font-mono text-xs text-[color:var(--subtle)] tabular-nums">
