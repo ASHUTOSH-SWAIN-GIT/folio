@@ -26,6 +26,12 @@ const voiceovers: Voiceover[] = [
       "System design walkthrough of Reddit — how posts, feeds, votes and comments fit together, and the tradeoffs behind each piece.",
     link: "https://drive.google.com/drive/folders/15T1PUaVVosUGLCtJWYKJWAHWTa8F7YaX?usp=sharing",
   },
+  {
+    title: "BetterStack System Design",
+    description:
+      "System design walkthrough of BetterStack — logs, metrics, alerts, ingestion pipelines, storage choices, and the tradeoffs behind observability systems.",
+    link: "https://drive.google.com/drive/folders/1LnGtuCcNJhNVy2Ddj5OaDV0Wyx9Tkm09?usp=sharing",
+  },
 ];
 
 export default function VoiceoversPage() {
