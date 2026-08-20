@@ -8,7 +8,7 @@ export const metadata = {
 type Voiceover = {
   title: string;
   description: string;
-  duration?: string;
+  duration: string;
   link: string;
 };
 
@@ -24,12 +24,14 @@ const voiceovers: Voiceover[] = [
     title: "Designing Reddit",
     description:
       "System design walkthrough of Reddit — how posts, feeds, votes and comments fit together, and the tradeoffs behind each piece.",
+    duration: "Duration TBD",
     link: "https://drive.google.com/drive/folders/15T1PUaVVosUGLCtJWYKJWAHWTa8F7YaX?usp=sharing",
   },
   {
     title: "BetterStack System Design",
     description:
       "System design walkthrough of BetterStack — logs, metrics, alerts, ingestion pipelines, storage choices, and the tradeoffs behind observability systems.",
+    duration: "Duration TBD",
     link: "https://drive.google.com/drive/folders/1LnGtuCcNJhNVy2Ddj5OaDV0Wyx9Tkm09?usp=sharing",
   },
 ];
@@ -65,11 +67,9 @@ export default function VoiceoversPage() {
                   {vo.title}
                 </h2>
                 <div className="flex items-center gap-2 shrink-0">
-                  {vo.duration && (
-                    <span className="font-mono text-xs text-[color:var(--subtle)]">
-                      {vo.duration}
-                    </span>
-                  )}
+                  <span className="font-mono text-xs text-[color:var(--subtle)]">
+                    {vo.duration}
+                  </span>
                   <ArrowUpRight
                     size={14}
                     className="text-[color:var(--subtle)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--accent)]"
