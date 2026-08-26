@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "@/components/Navbar";
-import PortfolioAnalytics from "@/components/PortfolioAnalytics";
 
 const sans = Geist({
   variable: "--font-sans",
@@ -39,7 +38,6 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="pb-24">{children}</main>
-        <PortfolioAnalytics />
         <Analytics />
       </body>
     </html>
