@@ -1,31 +1,48 @@
 "use client";
 
-import { Activity, Cpu, Database, HardDrive, LogOut, MemoryStick, Radio, RefreshCw, Server } from "lucide-react";
+import { Activity, Cpu, Database, Eye, Footprints, HardDrive, LogOut, MemoryStick, Radio, RefreshCw, Route, Server } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-type Values = Record<string, number | null>;
+type Values = Record<string, number | string | null>;
 type Snapshot = { values: Values; checkedAt: string };
 
 const targets = [
   ["portfolioUp", "Portfolio", Radio],
   ["prometheusUp", "Prometheus", Database],
   ["nodeExporterUp", "Node exporter", Server],
+  ["analyticsUp", "Analytics collector", Activity],
 ] as const;
 
-function formatPercent(value: number | null | undefined) {
-  return value == null ? "--" : `${value.toFixed(1)}%`;
+function numeric(value: number | string | null | undefined) {
+  return typeof value === "number" ? value : null;
 }
 
-function formatBytes(value: number | null | undefined) {
-  if (value == null) return "--";
-  return `${(value / 1024 / 1024).toFixed(1)} MB`;
+function formatPercent(value: number | string | null | undefined) {
+  const number = numeric(value);
+  return number == null ? "--" : `${number.toFixed(1)}%`;
 }
 
-function formatDuration(value: number | null | undefined) {
-  if (value == null) return "--";
-  if (value < 60) return `${Math.round(value)} sec`;
-  return `${Math.round(value / 60)} min`;
+function formatCount(value: number | string | null | undefined) {
+  const number = numeric(value);
+  return number == null ? "--" : Math.round(number).toLocaleString();
+}
+
+function formatBytes(value: number | string | null | undefined) {
+  const number = numeric(value);
+  if (number == null) return "--";
+  return `${(number / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function formatDuration(value: number | string | null | undefined) {
+  const number = numeric(value);
+  if (number == null) return "--";
+  if (number < 60) return `${Math.round(number)} sec`;
+  return `${Math.round(number / 60)} min`;
+}
+
+function formatRoute(value: number | string | null | undefined) {
+  return typeof value === "string" ? value : "--";
 }
 
 export default function PrivateMetricsDashboard() {
@@ -71,6 +88,13 @@ export default function PrivateMetricsDashboard() {
     ["App memory", formatBytes(values?.portfolioMemory), "Vercel process RSS", Activity],
     ["App uptime", formatDuration(values?.portfolioUptime), "current Vercel instance", Radio],
   ] as const;
+  const trafficCards = [
+    ["Visits", formatCount(values?.visits24h), "last 24 hours", Footprints],
+    ["Page views", formatCount(values?.pageViews24h), "last 24 hours", Eye],
+    ["Bounce rate", formatPercent(values?.bounceRate), "left before 10 seconds", Activity],
+    ["7 day visits", formatCount(values?.visits7d), "rolling seven days", Radio],
+    ["Top route", formatRoute(values?.topRoute), `${formatCount(values?.topRouteViews)} views today`, Route],
+  ] as const;
 
   return (
     <div className="pb-20">
@@ -106,6 +130,20 @@ export default function PrivateMetricsDashboard() {
       </header>
 
       {error && <p className="mb-8 border-l-2 border-[color:var(--accent)] pl-4 text-sm text-accent">{error}</p>}
+
+      <section aria-labelledby="traffic-heading" className="mb-10">
+        <p id="traffic-heading" className="mb-3 font-mono text-xs uppercase text-subtle">Portfolio traffic</p>
+        <div className="grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-[color:var(--hairline)] sm:grid-cols-3">
+          {trafficCards.map(([label, value, detail, Icon]) => (
+            <div key={label} className="min-h-40 bg-[color:var(--background)] p-5">
+              <Icon size={17} className="mb-7 text-accent" />
+              <p className="break-all font-mono text-2xl tabular-nums">{value}</p>
+              <p className="mt-1 text-xs text-subtle">{label}</p>
+              <p className="mt-4 text-xs leading-5 text-faint">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section aria-labelledby="target-health">
         <p id="target-health" className="mb-3 font-mono text-xs uppercase text-subtle">Target health</p>
