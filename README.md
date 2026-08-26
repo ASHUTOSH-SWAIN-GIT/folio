@@ -3,6 +3,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Observability
 
 The app exposes internal Prometheus metrics at `/metrics`.
+The private dashboard is available at `/metrics-dashboard` and requires these server-side environment variables:
+
+```bash
+METRICS_DASHBOARD_PASSWORD=choose-a-strong-password
+METRICS_SESSION_SECRET=generate-a-long-random-value
+PROMETHEUS_BASE_URL=https://your-private-metrics-proxy.example
+PROMETHEUS_API_TOKEN=generate-another-long-random-value
+```
 
 Configure Prometheus to scrape the deployed portfolio:
 
