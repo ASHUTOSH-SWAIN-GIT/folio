@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Observability
 
-The app exposes Prometheus metrics at `/metrics` and renders a small dashboard at `/observability`.
+The app exposes internal Prometheus metrics at `/metrics`.
 
 Configure Prometheus to scrape the deployed portfolio:
 
@@ -12,16 +12,8 @@ scrape_configs:
     scheme: https
     metrics_path: /metrics
     static_configs:
-      - targets: ["your-domain.example"]
+      - targets: ["www.lowkeydev.me"]
 ```
-
-The dashboard queries Prometheus from the Next.js server. Set its internal URL in the deployment environment:
-
-```bash
-PROMETHEUS_BASE_URL=http://127.0.0.1:9090
-```
-
-Keep Prometheus private. If the app and Prometheus run on different hosts, expose Prometheus through an authenticated private network or proxy instead of opening port `9090` publicly.
 
 ## Getting Started
 
