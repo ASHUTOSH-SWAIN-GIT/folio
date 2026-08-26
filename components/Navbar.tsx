@@ -10,6 +10,7 @@ const links = [
   { href: "/experience", label: "work" },
   { href: "/blog", label: "writing" },
   { href: "/voiceovers", label: "voiceovers" },
+  { href: "/observability", label: "metrics" },
 ];
 
 export default function Navbar() {
