@@ -24,7 +24,7 @@ const iconLinks = [
 
 export default function SocialLinks() {
   const [copied, setCopied] = useState(false);
-  const email = "ashutoshswain7383@gmail.com";
+  const email = "ashuswain9876@gmail.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
