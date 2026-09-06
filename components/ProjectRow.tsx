@@ -19,9 +19,6 @@ export default function ProjectRow({ project }: { project: Project }) {
           </a>
         </div>
         <div className="flex items-center gap-3 shrink-0">
-          <span className="font-mono text-xs text-[color:var(--subtle)] tabular-nums">
-            {project.year}
-          </span>
           <a
             href={project.link}
             target="_blank"

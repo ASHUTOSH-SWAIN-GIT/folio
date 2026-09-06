@@ -29,9 +29,6 @@ export default function Blog() {
                 {post.title}
               </h2>
               <div className="flex items-center gap-2 shrink-0">
-                <span className="font-mono text-xs text-[color:var(--subtle)]">
-                  {post.date}
-                </span>
                 <ArrowUpRight
                   size={14}
                   className="text-[color:var(--subtle)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--accent)]"

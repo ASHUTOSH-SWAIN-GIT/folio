@@ -48,8 +48,6 @@ export default async function BlogPost({ params }: Props) {
       <header className="flex flex-col gap-4">
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">{post.title}</h1>
         <div className="flex items-center gap-4 text-sm text-[color:var(--subtle)] font-mono">
-          <time>{post.date}</time>
-          <span>•</span>
           <span>5 min read</span>
         </div>
       </header>
