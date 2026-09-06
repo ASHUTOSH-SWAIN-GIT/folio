@@ -164,6 +164,14 @@ export const projects: Project[] = [
 
 export const blogs: Blog[] = [
   {
+    slug: "inside-neons-serverless-postgres-architecture",
+    title: "Inside Neon’s Serverless Postgres Architecture",
+    date: "2026",
+    excerpt:
+      "How Neon separates Postgres compute from storage using Safekeepers, Pageservers, and durable object storage.",
+    link: "https://medium.com/@ashutoshswain7383/inside-neons-serverless-postgres-architecture-8d6a237e7694?sharedUserId=ashutoshswain7383",
+  },
+  {
     slug: "bittorrent-protocol",
     title: "BitTorrent Protocol",
     date: "2025",
