@@ -17,14 +17,21 @@ export default function Home() {
           infrastructure that keeps everything running.
         </p>
         <p>
-          I learn by building. When a system interests me, I read the paper,
-          then try to implement a small version of it to understand how it
-          actually behaves under real conditions.
-        </p>
-        <p>
           Beyond the systems work, what I care about most is shipping things
           people genuinely use. Every project here is open source, mistakes
           and all.
+        </p>
+        <p>
+          Wanna talk more?{" "}
+          <a
+            href="https://calendly.com/ashuswain9876/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[color:var(--foreground)] underline decoration-[color:var(--accent)] underline-offset-4 transition-colors hover:text-[color:var(--accent)]"
+          >
+            Book a meet
+          </a>
+          .
         </p>
       </section>
 

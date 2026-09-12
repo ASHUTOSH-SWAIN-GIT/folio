@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
-import { CalendarDays, FileText, Mail, Check } from "lucide-react";
+import { FileText, Mail, Check } from "lucide-react";
 
 const iconLinks = [
   {
@@ -19,11 +19,6 @@ const iconLinks = [
     label: "Resume",
     href: "/resume.pdf",
     Icon: FileText,
-  },
-  {
-    label: "Book a meeting",
-    href: "https://calendly.com/ashuswain9876/30min",
-    Icon: CalendarDays,
   },
 ];
 
