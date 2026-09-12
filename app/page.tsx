@@ -22,12 +22,12 @@ export default function Home() {
           and all.
         </p>
         <p>
-          Wanna talk more?{" "}
+          Wanna talk more about my work?{" "}
           <a
             href="https://calendly.com/ashuswain9876/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[color:var(--foreground)] underline decoration-[color:var(--accent)] underline-offset-4 transition-colors hover:text-[color:var(--accent)]"
+            className="bg-[color:var(--accent-soft)] px-1 text-[color:var(--accent)] underline decoration-current underline-offset-4 transition-colors hover:text-[color:var(--foreground)]"
           >
             Book a meet
           </a>
