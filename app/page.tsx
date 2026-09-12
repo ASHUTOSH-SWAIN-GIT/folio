@@ -27,7 +27,13 @@ export default function Home() {
             href="https://calendly.com/ashuswain9876/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-[color:var(--foreground)] underline decoration-2 decoration-[color:var(--accent)] underline-offset-4 transition-colors hover:text-[color:var(--accent)]"
+            className="font-semibold text-[color:var(--foreground)] transition-colors hover:text-[color:var(--accent)]"
+            style={{
+              textDecorationLine: "underline",
+              textDecorationColor: "var(--accent)",
+              textDecorationThickness: "2px",
+              textUnderlineOffset: "4px",
+            }}
           >
             Book a meet
           </a>
