@@ -180,7 +180,7 @@ export const blogs: Blog[] = [
 export const experience: Experience[] = [
   {
     company: "Commenda",
-    role: "Software Engineering Intern",
+    role: "Platform Engineer",
     focus: "",
     timeframe: "2026",
     image: "/images/commenda.jpeg",
