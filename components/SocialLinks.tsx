@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { FileText, Mail, Check } from "lucide-react";
 
 const iconLinks = [
@@ -14,6 +14,11 @@ const iconLinks = [
     label: "X / Twitter",
     href: "https://x.com/LowKeyDevs",
     Icon: FaXTwitter,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/lowkeydev/",
+    Icon: FaLinkedinIn,
   },
   {
     label: "Resume",
