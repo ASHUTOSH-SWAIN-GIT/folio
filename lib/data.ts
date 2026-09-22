@@ -181,7 +181,8 @@ export const experience: Experience[] = [
   {
     company: "Commenda",
     role: "Platform Engineer",
-    focus: "",
+    focus:
+      "Observability for microservices in Betterstack, plus infra work.",
     timeframe: "2026",
     image: "/images/commenda.jpeg",
     link: "https://www.commenda.io/",
@@ -189,7 +190,7 @@ export const experience: Experience[] = [
   {
     company: "RaazMD",
     role: "Software Engineer",
-    focus: "",
+    focus: "Built the Next.js dashboard, integrated with Zoho.",
     timeframe: "2026",
     image: "/images/raazmd.png",
     link: "https://www.raazmd.com/",
@@ -197,7 +198,7 @@ export const experience: Experience[] = [
   {
     company: "Scout HQ",
     role: "Founding Engineer",
-    focus: "",
+    focus: "Built a RAG pipeline on Convex, worked with the Attendee dev.",
     timeframe: "2026",
     image: "/images/scouthq.png",
     link: "https://usescouthq.com/",
