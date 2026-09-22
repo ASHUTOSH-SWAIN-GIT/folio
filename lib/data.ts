@@ -18,7 +18,7 @@ export type Blog = {
 export type Experience = {
   company: string;
   role: string;
-  focus: string;
+  focus: string[];
   timeframe: string;
   image?: string;
   link?: string;
@@ -181,8 +181,10 @@ export const experience: Experience[] = [
   {
     company: "Commenda",
     role: "Platform Engineer",
-    focus:
-      "Observability for microservices in Betterstack, plus infra work.",
+    focus: [
+      "Owned observability for microservices using Betterstack",
+      "Worked on internal infrastructure",
+    ],
     timeframe: "2026",
     image: "/images/commenda.jpeg",
     link: "https://www.commenda.io/",
@@ -190,7 +192,10 @@ export const experience: Experience[] = [
   {
     company: "RaazMD",
     role: "Software Engineer",
-    focus: "Built the Next.js dashboard, integrated with Zoho.",
+    focus: [
+      "Built the Next.js dashboard",
+      "Integrated it with Zoho",
+    ],
     timeframe: "2026",
     image: "/images/raazmd.png",
     link: "https://www.raazmd.com/",
@@ -198,7 +203,10 @@ export const experience: Experience[] = [
   {
     company: "Scout HQ",
     role: "Founding Engineer",
-    focus: "Built a RAG pipeline on Convex, worked with the Attendee dev.",
+    focus: [
+      "Built a RAG pipeline on Convex",
+      "Worked closely with the Attendee developer",
+    ],
     timeframe: "2026",
     image: "/images/scouthq.png",
     link: "https://usescouthq.com/",

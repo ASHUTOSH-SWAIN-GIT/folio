@@ -36,10 +36,20 @@ export default function ExperiencePage() {
                 </div>
               </div>
               <p className="text-sm text-[color:var(--muted)]">{item.role}</p>
-              {item.focus && (
-                <p className="text-sm text-[color:var(--subtle)]">
-                  {item.focus}
-                </p>
+              {item.focus.length > 0 && (
+                <ul className="flex flex-col gap-1">
+                  {item.focus.map((point) => (
+                    <li
+                      key={point}
+                      className="flex gap-2 text-sm text-[color:var(--subtle)]"
+                    >
+                      <span aria-hidden className="text-[color:var(--subtle)]">
+                        –
+                      </span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           );
