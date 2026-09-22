@@ -205,7 +205,7 @@ export const experience: Experience[] = [
     role: "Founding Engineer",
     focus: [
       "Built a RAG pipeline on Convex",
-      "Worked closely with the Attendee developer",
+      "Worked with Attendee.dev, a third-party platform",
     ],
     timeframe: "2026",
     image: "/images/scouthq.png",
