@@ -16,19 +16,19 @@ const voiceovers: Voiceover[] = [
     title: "Stream Processing Engine",
     description:
       "Walkthrough of the engine — why stream processing exists, Kafka partitions to readers, source, router, the stateless and stateful worker stages, sinks, and backpressure.",
-    link: "https://drive.google.com/drive/u/1/folders/1tFdPwr-3XI1lG5HwfzvGBV9vTRBz3tvC",
+    link: "https://youtu.be/44Pc11zYf_4?si=jDGNEPHR-jWM2bZb",
   },
   {
     title: "Designing Reddit",
     description:
       "System design walkthrough of Reddit — how posts, feeds, votes and comments fit together, and the tradeoffs behind each piece.",
-    link: "https://drive.google.com/drive/folders/15T1PUaVVosUGLCtJWYKJWAHWTa8F7YaX?usp=sharing",
+    link: "https://youtu.be/4PdeD-pY9zI",
   },
   {
     title: "BetterStack System Design",
     description:
       "System design walkthrough of BetterStack — logs, metrics, alerts, ingestion pipelines, storage choices, and the tradeoffs behind observability systems.",
-    link: "https://drive.google.com/drive/folders/1LnGtuCcNJhNVy2Ddj5OaDV0Wyx9Tkm09?usp=sharing",
+    link: "https://youtu.be/-apDH39BAc4?si=gStKvoV5niQcQt1k",
   },
 ];
 
