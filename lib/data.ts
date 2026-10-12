@@ -26,6 +26,16 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
+    title: "yomu",
+    description:
+      "A desktop reader for technical blogs, docs and research papers, with an AI agent from your own machine beside every article. Talks to Codex, Claude Code or OpenCode over ACP — local-first, no account, no API key.",
+    link: "https://github.com/ASHUTOSH-SWAIN-GIT/Yomu",
+    demo: "https://yomu.lowkeydev.me/",
+    tags: ["Rust", "Tauri", "TypeScript", "ACP"],
+    kind: "product",
+    featured: true,
+  },
+  {
     title: "weibo",
     description:
       "A stream processing engine in Go, inspired by Apache Flink. Kafka sources, windowed aggregations, disk-backed state and checkpointing — up to exactly-once semantics on Kafka-to-Kafka pipelines.",
